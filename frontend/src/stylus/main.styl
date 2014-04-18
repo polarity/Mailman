@@ -1,0 +1,78 @@
+$space = 10px
+
+// Fontsss
+@import reset
+@import grid
+@import webcraft
+@import style-guide
+@import mediaqueries
+
+html
+	height: 100%
+body
+	height: 100%
+	@extend #FONT-MAIN
+	@extend #FONTSIZE-NORMAL
+	@extend #LINE-HEIGHT
+
+.Grid_SidePane
+	col(4,12)
+	height: 100%
+	overflow: hidden
+	overflow: scroll
+
+.Grid_MainPane
+	col(8,12)
+	@extend #PADDING-NORMAL
+	height: 100%
+	overflow: hidden
+	overflow: scroll
+
+.maillist-item
+	@extend #PADDING-NORMAL
+	@extend #BORDER-LIGHT
+	@extend #COLOR-BLACK
+	border-bottom-width: 1px
+	cursor: pointer
+
+.maillist-item.odd
+	@extend #BG-LIGHT
+
+.maillist-item.selected
+	@extend #BG-DARK
+	@extend #COLOR-WHITE
+	border-bottom-width: 1px
+
+.maillist-item-title
+	font-weight: bold
+
+.maillist-item-excerpt
+	@extend #FONTSIZE-TINY
+	@extend #LINE-HEIGHT-SMALL
+	font-weight: thin
+
+.MailWrapper
+	@extend #BG-LIGHT
+	@extend #MARGIN-BOTTOM-NORMAL
+
+.Mail
+	@extend #PADDING-NORMAL
+	@extend #CENTER
+	@extend #PADDING-MEGA
+	@extend #COLOR-BLACK
+	max-width: 500px
+
+.mail-header
+	@extend #MARGIN-BOTTOM-NORMAL
+	@extend #PADDING-V-NORMAL
+	@extend #BORDER-LIGHT
+	border-bottom-width: 1px
+	font-weight: bold
+
+.mail-article
+	@extend #PADDING-V-NORMAL
+	p
+		@extend #MARGIN-BOTTOM-NORMAL
+	img
+		max-width: 100%
+		@extend #PADDING-V-NORMAL

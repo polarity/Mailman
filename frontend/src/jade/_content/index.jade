@@ -1,0 +1,29 @@
+// extend layout1
+extends ../includes/_layout1
+
+// extend block head
+block head
+
+	// Head - Time for meta tags
+	+global_headstuff({title: "My App"})
+
+// extend block body
+block body
+	.Grid_SidePane(ng-controller="SidePaneController")
+		ul.MailList
+			li.maillist-item(
+				ng-class="{selected:item === $root.currentEmail}"
+				ng-repeat="item in mails | orderBy: +headers.date",
+				ng-click="selectEmail(item)")
+				h2.maillist-item-title {{item.headers.from}}
+				p.maillist-item-excerpt {{item.text | characters:100}}
+
+	.Grid_MainPane(ng-controller="MainPaneController")
+		.MailWrapper
+			.Mail
+				header.mail-header
+					p von: {{$root.currentEmail.headers.from}}
+					p an: {{$root.currentEmail.headers.to}}
+					p Datum: {{$root.currentEmail.headers.date}}
+					p Betreff: {{$root.currentEmail.headers.subject}}
+				article.mail-article(ng-bind-html="$root.currentEmail.text | md")

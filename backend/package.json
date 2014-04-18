@@ -1,0 +1,15 @@
+{
+  "name": "Mailman",
+  "version": "0.0.1",
+  "description": "Mail application with pure Web Technonolgies",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "dependencies": {
+    "easyimap": "~0.0.1",
+    "modmod": "~0.1.1",
+    "express": "~3.5.1"
+  },
+  "devDependencies": {}
+}
