@@ -1,4 +1,5 @@
 node_modules
+.sync
 .SyncID
 .SyncIgnore
 .SyncArchive
